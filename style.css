@@ -1,0 +1,13 @@
+.form-kiet {
+    height: 600px;
+    background-color: aqua;
+    width: 600px;
+    margin: auto;
+}
+.form {
+    margin: 10px 20px;
+}
+.form-head {
+    display: flex;
+    justify-content: space-between;
+}
