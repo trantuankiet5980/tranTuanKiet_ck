@@ -1,8 +1,10 @@
-.form-kiet {
-    height: 600px;
+#book-form {
+    height: 400px;
     background-color: aqua;
     width: 600px;
     margin: auto;
+    display: block;
+    padding: 20px;
 }
 .form {
     margin: 10px 20px;

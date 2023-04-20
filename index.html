@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="./bootstrap-4.6.1-dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="./bootstrap-4.6.1-dist/js/bootstrap.min.js">
+    <link rel="stylesheet" href="main.js">
     <link rel="stylesheet" href="./bootstrap-4.6.1-dist/js/jquery.min.js">
 </head>
 <body>
@@ -17,7 +18,7 @@
                 <div class="container-fluid">
                   <ul class="nav navbar-nav">
                     <li class="active"><a href="index.html">Trang chủ</a></li>
-                    <li><a href="#">Đặt mua</a></li>
+                    <li><a href="#" id="open">Đặt mua</a></li>
                   </ul>
                 </div>
             </nav>
@@ -37,40 +38,39 @@
                 </tbody>
             </table>
         </div>
-        <div class="form-kiet">
-            <form class="form">
-                <div class="form-head">
-                    <h2>Đặt lịch khám online</h2>
-                    <p>x</p>
-                </div>
-                <div class="form-group">
-                  <label for="maBN">Mã bệnh nhân</label>
-                  <input type="text" class="form-control" id="maBN" placeholder="Mã bệnh nhân" name="maBN">
-                </div>
-                <div class="form-group">
-                  <label for="pwd">Mật khẩu</label>
-                  <input type="password" class="form-control" id="pwd" placeholder="Mật khẩu" name="pwd">
-                </div>
-                <div class="form-group">
-                    <label for="ngayKham">Ngày khám</label>
-                    <input type="date" class="form-control" id="date" placeholder="Ngày khám" name="ngayKham">
-                </div>
-                <div class="form-group">
-                    <label for="loaiDV">Loại dịch vụ</label><br>
-                    <label class="checkbox-inline"><input type="checkbox" value="">Khám bệnh theo yêu cầu</label>
-                    <label class="checkbox-inline"><input type="checkbox" value="">Điều trị ngoại trú</label>
-                    <label class="checkbox-inline"><input type="checkbox" value="">Bác sĩ theo yêu cầu</label>
-                </div>
-                <div class="form-group">
-                    <label for="chuyenKhoa">Chuyên khoa</label>
-                    <input type="text" class="form-control" id="chuyenKhoa" placeholder="Chuyên khoa" name="chuyenKhoa">
-                </div>
-                <button type="submit" class="btn btn-primary">Submit</button>
-                <br>
-                <br>
-                <button type="submit" class="btn btn-primary kiet" style="margin-left: 500px;">Close</button>
-            </form>
-        </div>
+        <form id="book-form">
+            <label for="patient-id">Mã bệnh nhân*: </label>
+            <input type="text" id="patient-id" name="patient-id" required>
+            <span id="patient-id-error"></span><br>
+            
+            <label for="password">Mật khẩu*: </label>
+            <input type="password" id="password" name="password" required>
+            <span id="password-error"></span><br>
+            
+            <label for="date">Ngày khám*: </label>
+            <input type="date" id="date" name="date" required>
+            <span id="date-error"></span><br>
+            
+            <label>Loại dịch vụ*: </label><br>
+            <input type="checkbox" id="service1" name="service" value="service1">
+            <label for="service1">Khám theo yêu cầu</label><br>
+            <input type="checkbox" id="service2" name="service" value="service2">
+            <label for="service2">Điều trị ngoại trú</label><br>
+            <input type="checkbox" id="service3" name="service" value="service3">
+            <label for="service3">Bác sĩ theo yêu cầu</label>
+            <span id="service-error"></span><br>
+            
+            <label for="specialty">Chuyên khoa*: </label>
+            <select id="specialty" name="specialty">
+              <option value="0.1">Ngoại tổng quát</option>
+              <option value="0.2">Nhi</option>
+              <option value="0.3">Nội tổng quát</option>
+            </select>
+            <span id="specialty-error"></span><br>
+            
+            <input type="submit" value="Đặt lịch">
+          </form>
     </div>
+    
 </body>
 </html>
