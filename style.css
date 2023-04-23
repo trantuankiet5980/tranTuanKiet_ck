@@ -1,15 +1,16 @@
-#book-form {
-    height: 400px;
+
+#modal {
+    margin: 10px 20px;
+    height: 690px;
     background-color: aqua;
     width: 600px;
     margin: auto;
-    display: block;
+    display: none;
     padding: 20px;
 }
-.form {
-    margin: 10px 20px;
-}
-.form-head {
-    display: flex;
-    justify-content: space-between;
+#mocmd {
+    border: none;
+    background-color: #fff;
+    color: blue;
+    margin-left: -5px;
 }

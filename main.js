@@ -1,9 +1,12 @@
-let modal = document.getElementById("modal");
+var test = document.getElementById('modal');
+var mo = document.getElementById('mocmd');
+var dong = document.getElementById('dong');
+var dat = document.getElementById('dat')
 
-let open = document.getElementById("open")
-open.onclick = function (){
-    modal.style.display = 'block';
+mo.onclick = function() {
+    test.style.display = 'block'
 }
-function close() {
-    modal.style.display = "none";
+dong.onclick = function() {
+    test.style.display = 'none'
 }
+
